@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Instagram Feed Bootstrap</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Navbar -->
+        <nav class="navbar navbar-light bg-light">
+
+            <!-- Imagen y Nombre -->
+            <a class="navbar-brand" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt="" width="30" height="26"
+                    class="d-inline-block align-text-top">
+                Instagram
+            </a>
+
+            <!-- Botones en el lado derecho -->
+            <div class="d-flex justify-content-end">
+
+                <!-- Botón modal Crear un nuevo Post -->
+                <button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#myModal">
+                    Create new post
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">Create a new post</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+
+                                <!-- Caption y espacio de texto -->
+                                <h5>Caption:</h5>
+                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                    placeholder="Add the caption of your post here" rows="2"></textarea>
+
+                                <!-- Botón con imagen de cámara -->
+                                <button type="button" class="btn btn-light m-2  btn-sm">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/45/45010.png" alt="Cámara"
+                                        width="25" height="25" class="me-2">
+                                </button>
+
+                                <!-- Botón con imagen de punto de ubicación -->
+                                <button type="button" class="btn btn-light btn-sm">
+                                    <img src="https://icones.pro/wp-content/uploads/2021/02/icone-de-broche-de-localisation-noire.png"
+                                        alt="Cámara" width="32" height="25" class="me-2">
+                                </button>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Publish</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botón Dropdown -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle ms-2" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-gear" style="color: #ffffff;"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><button class="dropdown-item" type="button">Profile</button></li>
+                        <li><button class="dropdown-item" type="button">Accesibility</button></li>
+                        <li><button class="dropdown-item" type="button">Privacy and Data</button></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger href=" #">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Botones de cambio de pantalla -->
+        <ul class="nav nav-tabs justify-content-center border-0 mb-4 mt-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active border-0" id="pills-home-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                    aria-selected="true"> <i class="fa-solid fa-table-cells"></i> </button>
+            </li>
+            <li class=" nav-item" role="presentation">
+                <button class="nav-link border-0" id="pills-profile-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                    aria-selected="false"> <i class="fa-solid fa-square"></i> </button>
+            </li>
+        </ul>
+
+        <!-- Pantallas -->
+        <div class="tab-content" id="pills-tabContent">
+
+            <!-- Pantalla Cuadriculada -->
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <!--Cards-->
+                <div class="row row-cols-1 row-cols-md-3 g-2">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://cdn.pixabay.com/photo/2023/05/28/09/23/south-tyrol-8023219_1280.jpg"
+                                class="card-img-top img-fluid" alt="Paisaje rocas">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://cdn.pixabay.com/photo/2023/05/22/11/22/superb-fairywren-8010454_1280.jpg"
+                                class="card-img-top" alt="Pajaro">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://www.lanacion.com.ar/resizer/aHM8aP90X4O2BPgw-D9mOEhRUQw=/1920x0/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/SWZYZHN5QJA6NIJESGSFZS4Q4Q.JPG"
+                                class="card-img-top" alt="ciervo">
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://img.freepik.com/fotos-premium/muchacha-romantica-hippie-que-coloca-campo-verano-estilo-hippie_3579-5488.jpg"
+                                class="card-img-top" alt="Flores y Mujer">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://cdn.pixabay.com/photo/2023/05/29/18/10/pottery-8026824_1280.jpg"
+                                class="card-img-top" alt="Arcilla">
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://media.istockphoto.com/id/1135037023/es/foto/gachas-de-avena-con-pl%C3%A1tano-y-almendras.jpg?s=612x612&w=0&k=20&c=d0Hx3-Y_6x_EiSjoyitDa-h-cczAG6rt5-dPood3wC0="
+                                class="card-img-top" alt="Avena">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://cdn.pixabay.com/photo/2023/05/27/11/03/woman-8021288_1280.jpg"
+                                class="card-img-top" alt="Mujer asiatica">
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://cdn.pixabay.com/photo/2023/04/18/08/28/flowers-7934502_1280.jpg"
+                                class="card-img-top" alt="Flores claveles">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://cdn.pixabay.com/photo/2023/05/21/12/40/dog-8008483_1280.jpg"
+                                class="card-img-top" alt="Perro corriendo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pantalla Vertical-->
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+                <!--Cards Verticales-->
+                <div class="card text-white bg-light mb-3 mx-auto" style="max-width: 30rem;">
+                    <!-- Header Card -->
+                    <div class="row mt-2">
+                        <div class="col-md-8">
+                            <h4 class="text-dark ms-2"> Majestic Mountains </h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <h6 class="text-dark me-2">02/01</h6>
+                        </div>
+                    </div>
+                    <!-- Imagen Card-->
+                    <img src="https://cdn.pixabay.com/photo/2023/05/28/09/23/south-tyrol-8023219_1280.jpg"
+                        class="card-img-top" alt="Paisaje Rocas">
+                    <!-- Body Card-->
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">204 Likes</h6>
+                        <p class="card-text text-dark">No se trata de si van a derribarte, se trata de si vas a
+                            levantarte cuando lo hagan </p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-light mb-3 mx-auto" style="max-width: 30rem;">
+                    <!-- Header Card -->
+                    <div class="row mt-2">
+                        <div class="col-md-8">
+                            <h4 class="text-dark ms-2"> A little cute bird </h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <h6 class="text-dark me-2">18/05</h6>
+                        </div>
+                    </div>
+                    <!-- Imagen Card-->
+                    <img src="https://cdn.pixabay.com/photo/2023/05/22/11/22/superb-fairywren-8010454_1280.jpg"
+                        class="card-img-top" alt="Pajaro">
+                    <!-- Body Card-->
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">387 Likes</h6>
+                        <p class="card-text text-dark">Qué maravilloso es que nadie tenga que esperar ni un segundo para
+                            empezar a mejorar el mundo</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-light mb-3 mx-auto" style="max-width: 30rem;">
+                    <!-- Header Card -->
+                    <div class="row mt-2">
+                        <div class="col-md-8">
+                            <h4 class="text-dark ms-2"> Spirit in deer </h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <h6 class="text-dark me-2">23/04</h6>
+                        </div>
+                    </div>
+                    <!-- Imagen Card-->
+                    <img src="https://www.lanacion.com.ar/resizer/aHM8aP90X4O2BPgw-D9mOEhRUQw=/1920x0/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/SWZYZHN5QJA6NIJESGSFZS4Q4Q.JPG"
+                        class="card-img-top" alt="Ciervo">
+                    <!-- Body Card-->
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">405 Likes</h6>
+                        <p class="card-text text-dark">El pesimista ve dificultades en cada oportunidad. El optimista ve
+                            oportunidades en cada dificultad</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-light mb-3 mx-auto" style="max-width: 30rem;">
+                    <!-- Header Card -->
+                    <div class="row mt-2">
+                        <div class="col-md-8">
+                            <h4 class="text-dark ms-2"> Happy Moment</h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <h6 class="text-dark me-2">12/12</h6>
+                        </div>
+                    </div>
+                    <!-- Imagen Card-->
+                    <img src="https://img.freepik.com/fotos-premium/muchacha-romantica-hippie-que-coloca-campo-verano-estilo-hippie_3579-5488.jpg"
+                        class="card-img-top" alt="Flores y Mujer">
+                    <!-- Body Card-->
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">104 Likes</h6>
+                        <p class="card-text text-dark">Si estás trabajando en algo que te importa de verdad, nadie tiene
+                            que empujarte: tu visión te empuja</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-light mb-3 mx-auto" style="max-width: 30rem;">
+                    <!-- Header Card -->
+                    <div class="row mt-2">
+                        <div class="col-md-8">
+                            <h4 class="text-dark ms-2"> My therapy </h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <h6 class="text-dark me-2">28/12</h6>
+                        </div>
+                    </div>
+                    <!-- Imagen Card-->
+                    <img src="https://cdn.pixabay.com/photo/2023/05/29/18/10/pottery-8026824_1280.jpg"
+                        class="card-img-top" alt="Arcilla">
+                    <!-- Body Card-->
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">234 Likes</h6>
+                        <p class="card-text text-dark">No tienes que ser grande para empezar. Pero tienes que empezar
+                            para poder ser grande</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-light mb-3 mx-auto" style="max-width: 30rem;">
+                    <!-- Header Card -->
+                    <div class="row mt-2">
+                        <div class="col-md-8">
+                            <h4 class="text-dark ms-2"> Yummy Yummy </h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <h6 class="text-dark me-2">08/06</h6>
+                        </div>
+                    </div>
+                    <!-- Imagen Card-->
+                    <img src="https://media.istockphoto.com/id/1135037023/es/foto/gachas-de-avena-con-pl%C3%A1tano-y-almendras.jpg?s=612x612&w=0&k=20&c=d0Hx3-Y_6x_EiSjoyitDa-h-cczAG6rt5-dPood3wC0="
+                        class="card-img-top" alt="Avena">
+                    <!-- Body Card-->
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">502 Likes</h6>
+                        <p class="card-text text-dark">El momento en que quieres dejarlo es justo el momento en que
+                            tienes que seguir avanzando</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-light mb-3 mx-auto" style="max-width: 30rem;">
+                    <!-- Header Card -->
+                    <div class="row mt-2">
+                        <div class="col-md-8">
+                            <h4 class="text-dark ms-2"> In harmony </h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <h6 class="text-dark me-2">13/03</h6>
+                        </div>
+                    </div>
+                    <!-- Imagen Card-->
+                    <img src="https://cdn.pixabay.com/photo/2023/05/27/11/03/woman-8021288_1280.jpg"
+                        class="card-img-top" alt="Mujer asiatica">
+                    <!-- Body Card-->
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">1200 Likes</h6>
+                        <p class="card-text text-dark">Rodéate de personas que crean en tus sueños, animen tus ideas,
+                            apoyen tus ambiciones, y saquen lo mejor de ti</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-light mb-3 mx-auto" style="max-width: 30rem;">
+                    <!-- Header Card -->
+                    <div class="row mt-2">
+                        <div class="col-md-8">
+                            <h4 class="text-dark ms-2"> Beautiful flowers </h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <h6 class="text-dark me-2">12/09</h6>
+                        </div>
+                    </div>
+                    <!-- Imagen Card-->
+                    <img src="https://cdn.pixabay.com/photo/2023/04/18/08/28/flowers-7934502_1280.jpg"
+                        class="card-img-top" alt="Flores claveles">
+                    <!-- Body Card-->
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">603 Likes</h6>
+                        <p class="card-text text-dark">La verdadera motivación procede de trabajar en cosas que nos
+                            importan</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-light mb-3 mx-auto" style="max-width: 30rem;">
+                    <!-- Header Card -->
+                    <div class="row mt-2">
+                        <div class="col-md-8">
+                            <h4 class="text-dark ms-2"> My cute doggy </h4>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <h6 class="text-dark me-2">15/09</h6>
+                        </div>
+                    </div>
+                    <!-- Imagen Card-->
+                    <img src="https://cdn.pixabay.com/photo/2023/05/21/12/40/dog-8008483_1280.jpg" class="card-img-top"
+                        alt="Perro corriendo">
+                    <!-- Body Card-->
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">492 Likes</h6>
+                        <p class="card-text text-dark">El mayor peligro para la mayoría de nosotros no es apuntar
+                            demasiado alto y fallar, sino apuntar demasiado bajo y acertar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/e2aad4d631.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
